@@ -29,9 +29,9 @@ export function LoginPage() {
   const [error, setError] = useState('');
   const { setUser } = useAuthStore();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    
+
     const adminUser = ADMIN_USERS.find(
       admin => admin.email === email && admin.password === password
     );
@@ -55,10 +55,9 @@ export function LoginPage() {
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
           Admin Login
         </h2>
-        <p>UID: admin@example.com or admin@test.com</p>
-        <p>Pass: admin</p>
+        <p className="text-center">UID: admin@example.com or admin@test.com</p>
+        <p className="text-center">Pass: admin</p>
       </div>
-
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleLogin}>
@@ -76,7 +75,6 @@ export function LoginPage() {
                 />
               </div>
             </div>
-
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                 Password
@@ -91,11 +89,9 @@ export function LoginPage() {
                 />
               </div>
             </div>
-
             {error && (
-              <div className="text-red-600 text-sm">{error}</div>
+              <div className="text-red-600 text-sm text-center">{error}</div>
             )}
-
             <div>
               <Button type="submit" className="w-full">
                 Sign in
