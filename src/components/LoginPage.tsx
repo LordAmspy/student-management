@@ -55,6 +55,8 @@ export function LoginPage() {
         <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
           Admin Login
         </h2>
+        <p>UID: admin@example.com or admin@test.com</p>
+        <p>Pass: admin</p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
